@@ -17,8 +17,8 @@
       <header>
         <h1><a href="https://loganzartman.github.io/sweblog17/">{{ site.title | default: site.github.repository_name }}</a></h1>
         <img src="https://loganzartman.github.io/sweblog17/profile.jpg"/>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-        <p>Published on {{ page.date }}</p>
+        <p>{{ site.description | default: site.github.project_tagline }}
+        {% if page.date %} <br/> Published on {{ page.date | date: "%-d %B %Y" }} {% endif %}</p>
 
         {% if site.github.is_project_page %}
           <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
